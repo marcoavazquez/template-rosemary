@@ -1,0 +1,42 @@
+.fondo
+    background-image url('http://www.fondox.net/wallpapers/inmenso-mar-azul-3484.jpg')
+    background-color #2A8DA0
+    position relative
+.content
+    h3
+        font-weight 400
+        text-transform uppercase
+    color gris_claro
+    background linear-gradient(190deg,
+        transparent 6%,white 6%,white 75%,transparent 75%)
+
+    section
+        font-weight 100 !important
+        &:nth-child(-n+2)
+            border-bottom 1px solid #F0F0F0
+        article
+                padding-top 2em
+                padding-bottom 6em
+            span
+                &:nth-child(1)
+                    font-size 2em
+
+.perfil
+    box-sizing border-box
+    padding-top 15em
+
+.info
+    color white
+    article
+        h3
+            margin-top 6em !important
+
+@media screen and (min-width:640px)
+    .content
+        background linear-gradient(190deg,
+                transparent 10%,white 10%,white 75%,transparent 75%)
+
+@media screen and (min-width:1024px)
+    .content
+        background linear-gradient(190deg,
+                transparent 15%,white 15%,white 70%,transparent 70%)

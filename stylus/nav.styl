@@ -1,0 +1,44 @@
+.menu
+    margin 0
+    padding 0
+    li
+        background rgba(255,255,255,0.9)
+        list-style none
+        a
+            color azul_celeste
+            display block
+            height 100%
+            padding  1em 0
+            text-decoration none
+            width 100%
+
+        :hover
+            background white
+
+.menu-movil
+    top 1em
+    left 1em
+    font-size 1.2rem
+    position absolute
+    &:hover
+        &:before
+            cursor pointer
+
+@media screen and (min-width:1024px)
+    .menu
+        position absolute
+        top 1em
+        right 1em
+        li
+            background none
+            padding 0em 1em
+            display inline-block
+            a
+                font-size 0.8em
+                color white
+                text-decoration none
+                text-transform uppercase
+            &:hover
+                background none !important
+                text-decoration underline
+
