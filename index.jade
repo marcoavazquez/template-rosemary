@@ -1,9 +1,24 @@
+include djade_mixins
+
+- status = "dev" // dev: para desarrollo | prod: para producción
+
+if status == "dev"
+    - u = ""
+    - _u = ""
+    - s = ""
+    - _s = ""
+else
+    - u = "{% url '"
+    - _u = "' %}"
+    - s = "{% static '"
+    - _s = "' %}"
+
 <!DOCTYPE html>
 html(lang="es")
     head
         meta(charset="UTF-8")
         meta(name="viewport",content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-        link(rel="stylesheet", href="css/estilos.css")
+        link(rel="stylesheet", href="#{s}css/estilos.css#{_s}")
         title Rosemary | Ideatics
     body
         .fondo.desktop
@@ -25,7 +40,8 @@ html(lang="es")
                 section.perfil.movil.tablet.desktop
                     article
                         span.icon-user
-                        h3 Perfil
+                        h3 Perfi
+
                         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ut iusto sunt ea facilis, qui laboriosam facere nam expedita repellat debitis maxime tenetur eveniet, corrupti aliquam exercitationem beatae! Fugit, optio.
 
                         span.boton.btn-1 Leer Más
@@ -60,4 +76,4 @@ html(lang="es")
                             li: a(href="#") Contacto
 
         script(src="http://code.jquery.com/jquery-1.11.2.min.js")
-        script(src="js/script.js")
+        script(src="#{s}js/script.js#{_s}")
